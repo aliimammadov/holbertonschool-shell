@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Open /etc/passwd file for reading
+while IFS=: read -r username password uid gid fullname homedir shell
+do
+    # Print username, uid, and homedir
+    echo "$username:$uid:$homedir"
+done < /etc/passwd

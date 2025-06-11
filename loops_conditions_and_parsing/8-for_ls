@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# This script lists the content of the current directory in a specific format
-
-for file in */
-do
-    if [[ "$file" != .* && "$file" == *-* ]]; then
-        echo "${file#*-}"
-    fi
+#
+for file in *; do
+  if [[ "$file" == *-* ]]; then
+    echo "${file#*-}"
+  else
+    echo "$file"
+  fi
 done
